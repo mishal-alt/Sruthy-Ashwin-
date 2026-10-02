@@ -15,7 +15,7 @@ export function Moments() {
   const areas: [string, string, string, string][] = [
     ['main', invite.images.galleryMain, 'Together Forever', 'center 60%'],
     ['groom', invite.groom.photo, invite.groom.name, 'center 25%'],
-    ['bride', invite.bride.photo, invite.bride.name, 'center 12%'],
+    ['bride', invite.bride.photo, invite.bride.name, 'center 22%'],
     ['ring', invite.images.ring, 'Ring Exchange', '32% center'],
     ['gb', invite.images.galleryCouple, invite.coupleLabel, 'center 50%'],
   ]
