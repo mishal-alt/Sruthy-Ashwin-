@@ -80,7 +80,15 @@ export default function App() {
           mapUrl={invite.ceremony.mapUrl}
           theme="ceremony"
           next="reception"
-        />
+        >
+          <Countdown
+            bare
+            id="wedding-countdown"
+            target={invite.dateISO}
+            label="Counting down to the wedding"
+            arrivedLabel="The wedding day is here 💛"
+          />
+        </EventSection>
         <EventSection
           id="reception"
           title="Reception"

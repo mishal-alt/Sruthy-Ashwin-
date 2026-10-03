@@ -11,6 +11,18 @@ const themes = {
   reception: { glow: 'radial-gradient(circle, rgba(196,113,122,0.16) 0%, rgba(212,175,55,0.1) 40%, transparent 70%)', hover: '#C4717A' },
 }
 
+function CalendarIcon({ body }: { body: string }) {
+  const m = body.match(/(\d{1,2})\s+([A-Za-z]{3})/)
+  const day = m?.[1] ?? ''
+  const month = (m?.[2] ?? '').toUpperCase()
+  return (
+    <span className="inline-block w-12 overflow-hidden rounded-lg border border-[#D4AF37]/50 bg-white shadow-sm align-middle" aria-hidden>
+      <span className="block bg-[#C4414A] py-0.5 text-[11px] font-semibold leading-4 tracking-widest text-white">{month}</span>
+      <span className="block py-1 font-serif text-2xl font-bold leading-6 text-[#2B2B2B]">{day}</span>
+    </span>
+  )
+}
+
 function Card({ icon, title, body, theme, index }: Item & { theme: Theme; index: number }) {
   const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([])
   const press = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -29,7 +41,7 @@ function Card({ icon, title, body, theme, index }: Item & { theme: Theme; index:
       whileHover={{ y: -6, boxShadow: '0 20px 50px rgba(107,125,58,0.18)' }}
       onClick={press}
     >
-      <motion.div className="relative z-10 text-4xl mb-3" whileHover={{ scale: 1.2, rotate: [-6, 6, 0] }} transition={{ duration: 0.4 }}>{icon}</motion.div>
+      <motion.div className="relative z-10 text-4xl mb-3" whileHover={{ scale: 1.2, rotate: [-6, 6, 0] }} transition={{ duration: 0.4 }}>{icon === '📅' ? <CalendarIcon body={body} /> : icon}</motion.div>
       <h3 className="relative z-10 mb-2 font-serif text-2xl text-[#4F5D2A]">{title}</h3>
       <p className="relative z-10 text-sm leading-relaxed text-[#7A7266]">{body}</p>
       <div className="absolute bottom-0 left-1/2 h-1 w-0 -translate-x-1/2 rounded-full opacity-0 transition-all duration-300 group-hover:w-[45%] group-hover:opacity-100" style={{ background: themes[theme].hover }} />

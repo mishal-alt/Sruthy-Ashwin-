@@ -16,7 +16,7 @@ export function Moments() {
     ['main', invite.images.galleryMain, 'Together Forever', 'center 60%'],
     ['groom', invite.groom.photo, invite.groom.name, 'center 20%'],
     ['bride', invite.bride.photo, invite.bride.name, 'center 5%'],
-    ['ring', invite.images.ring, 'Ring Exchange', '32% center'],
+    ['ring', invite.images.ring, 'The Sacred Union', '32% center'],
     ['gb', invite.images.galleryCouple, invite.coupleLabel, 'center 50%'],
   ]
   return (

@@ -31,8 +31,8 @@ export const invite = {
     'With hearts entwined in love and souls bound by destiny, we invite you to witness the beginning of our forever and seek the blessings of the Almighty.',
   invitationLine: 'joyfully request your gracious presence',
   ringText:
-    'The moment two souls promise each other a lifetime — sealed with a ring, blessed by the Almighty.',
-  ringPlace: 'Guruvayoor',
+    'Two hearts, two families, one beautiful beginning — a sacred union blessed by the Almighty and the love of all who hold us dear.',
+  ringPlace: 'Guruvayur',
   sangeet: {
     items: [
       { icon: '📅', title: 'Date', body: '23 December 2026 · Wednesday' },
@@ -45,7 +45,7 @@ export const invite = {
     items: [
       { icon: '📅', title: 'Date', body: '26 December 2026 · Saturday' },
       { icon: '✨', title: 'Muhurtham', body: '9:00 AM – 10:00 AM' },
-      { icon: '🛕', title: 'Venue', body: 'Guruvayoor Temple' },
+      { icon: '🛕', title: 'Venue', body: 'Guruvayur Sree Krishna Temple' },
       { icon: '📍', title: 'Address', body: 'Rugmini Regency, East Nada' },
     ],
     mapUrl: 'https://share.google/wFpJBWA0dZz36qW6R',
