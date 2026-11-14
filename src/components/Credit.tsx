@@ -19,6 +19,7 @@ const link = {
 
 // Understated footer credit: small muted line with the Instagram mark.
 export function Credit() {
+  if (typeof location !== 'undefined' && location.hostname.endsWith('.vercel.app')) return null
   return (
     <div className="mt-16 flex justify-center">
       <a {...link} className="inline-flex items-center gap-1.5 text-[11px] tracking-wide text-[#7A7266]/70 transition-colors hover:text-[#4F5D2A]">
